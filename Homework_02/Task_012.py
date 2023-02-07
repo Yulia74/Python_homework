@@ -23,7 +23,7 @@ for x in range(1001):
 sum = int(input('Сумма чисел х и у равна '))
 prod = int(input('Произведение чисел х и у равно '))
 
-for x in range(1001):
-    for y in range(1001):
-        if x+y == sum and x*y == prod:
-            print(f'x = {x}, y = {y}')
+for i in range(sum):
+    for j in range(prod):
+        if i+j == sum and i*j == prod:
+            print(f'x = {i}, y = {j}')
