@@ -21,3 +21,24 @@ for i in range(watermelon):
         min = weight
 print(f'Самый тяжелый арбуз весит {max} кг')
 print(f'Самый легкий арбуз весит {min} кг')
+
+'''
+2-ой вариант решения (через список для веса арбузов)
+count = int(input('Введите количество арбузов: '))
+weqgth = []
+
+for i in range(count):
+    weight.append(int(input('Введите вес выбранного арбуза: ')))
+
+weight_min = weight[0]
+weight_max = weight[1]
+
+for i in range(len(weight)):
+    if weight[i] > weight_max:
+        weight_max = weight[i]
+    elif weight[i] < weight_min:
+            weight_min = weight[i]
+
+print(weight_min)
+print(weight_max)
+'''
