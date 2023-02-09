@@ -21,6 +21,6 @@ dif_min = x
 for i in range(len(A)):
     if A[i] == x:
         break
-    if x-A[i] < dif_min:
+    if abs(x-A[i]) < dif_min:     # abs - модуль числа
         dif_min = A[i]
 print(f'Самый близкий по величине элемент {A[i]}')
