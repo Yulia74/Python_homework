@@ -22,3 +22,11 @@ for i in range(len(list)):
     if list[i]==x:
         count+=1
 print(f'число x встречается {count} раз(а)')
+
+# Можно сделать цикл иначе:
+# for i in list:
+#     if i==x:
+#         count+=1
+
+# Можно воспользоваться функцией count
+# print(list.count(x))

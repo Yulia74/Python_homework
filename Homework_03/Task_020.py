@@ -46,6 +46,3 @@ result = 0
 for item in string:
     result += global_dict[item]
 print(result)
-
-
-
