@@ -11,7 +11,7 @@
 1 вариант решения задачи:
 '''
 
-a1 = int(input('Введите первый элемент арифметической прогрессии: '))
+a = int(input('Введите первый элемент арифметической прогрессии: '))
 d = int(input('ВВедите разность между ее членами: '))
 n = int(input('Введите количество членов прогрессии: '))
 
@@ -22,9 +22,22 @@ n = int(input('Введите количество членов прогресс
 
 # 2 вариант решения задачи:
 
-arithm_prog = []
-for i in range(n):
-    arithm_prog.append(a1+i*d)
-print(*arithm_prog)
+# arithm_prog = []
+# for i in range(n):
+#     arithm_prog.append(a1+i*d)
+# print(*arithm_prog)
+
+
+# 3 вариант решения задачи (через рекурсию)
+
+def rec(n):
+    if n ==0:
+        return 0
+    return (a + d*(n-1))
+
+list = []              
+for i in range(1,n+1):
+    list.append(rec(i))
+print(*list)              
 
 
