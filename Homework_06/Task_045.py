@@ -27,7 +27,7 @@ for i in range(1, k):
         print(i, m)
 
 2 вариант решения задачи
-'''
+
 n = int(input('Введите число n, не превышающее 10^5: '))
 
 def sum_friendly(n):
@@ -41,3 +41,27 @@ for i in range(1, n):
     j = sum_friendly(i)
     if i < j <= n and i == sum_friendly(j):
         print(i, j)
+
+3 вариант решения задачи
+'''
+import time           # добавляем проверку на длительность выполенения кода
+
+n = int(input())
+
+start = time.time()   # засекаем время на выполнение
+
+list_1 = list()
+for i in range(n):
+    summa = 0
+    for j in range(1, i // 2 + 1):
+        if i % j == 0:
+            summa += j
+            list_1.append(tuple([i, summa]))
+
+for i in range(len(list_1)):
+    for j in range(i, len(list_1)):
+        if i != j and list_1[i][0] == list_1[j][1] and list_1[i][1] == list_1[j][0]:
+            print(*list_1[i])
+
+end = time.time()
+print(end-start)
